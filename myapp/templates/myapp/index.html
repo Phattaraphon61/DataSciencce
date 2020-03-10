@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-	<title>Contact V8</title>
+	<title>DataScience</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
@@ -28,7 +28,7 @@
 			z-index: 1;
 		}
 
-		.center {
+		.summit {
 
 			display: -webkit-box;
 			display: -webkit-flex;
@@ -53,17 +53,20 @@
 			<span class="contact100-form-title">
 				DataScience
 			</span>
+			<form role="form" action=" " method="POST"><br>
+				{% csrf_token %}
+				<div class="wrap-input100 validate-input">
+					<textarea class="input100" type="text" name="data" placeholder="บทความ"></textarea>
+				</div>
 
-			<div class="wrap-input100 validate-input">
-				<textarea class="input100" type="text" name="name" placeholder="บทความ"></textarea>
-			</div>
-
-			<div class="contact100-form-title">HELLO WORLD!</div>
-			<div class="center">
-				<button class="contact100-form-btn">
-					Summit
-				</button>
-			</div>
+				<div class="contact100-form-title">Classification : {{ result }}</div>
+				<div class="contact100-form-title">Accuracy : {{Accuracy}} %</div>
+				<div class="summit">
+					<button class="contact100-form-btn">
+						Summit
+					</button>
+				</div>
+			</form>
 		</div>
 	</div>
 
